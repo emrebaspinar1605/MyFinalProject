@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 
 namespace WebAPI.Controllers
 {
@@ -31,6 +32,7 @@ namespace WebAPI.Controllers
         {
             //Swagger
             //Dependency chain
+            Thread.Sleep(5000);
             var result = _productService.GetAll();
             if (result.Success)
             {
